@@ -1,30 +1,32 @@
 <template>
-  <img
-    alt="Vue logo"
-    class="logo"
-    src="../assets/logo.svg"
-    width="25"
-    height="25" />
-
-  <div class="wrapper">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+  <div class="nav-wrapper">
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="../assets/logo.svg"
+      width="25"
+      height="25" />
+  
+    <div class="nav-menu-wrapper {">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.wrapper {
+.nav-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;;
+  padding: 10px 60px;
+}
+.nav-menu-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 280px;
-}
-
-.navMenu {
-  padding-right: 20px;
-  height: 45px;
-  vertical-align: middle;
 }
 
 /* @media (max-width: 740px) {

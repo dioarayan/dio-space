@@ -4,8 +4,8 @@
     </header>
 
     <MyIntro />
-    <MySkills />
     <AboutMe />
+    <MySkills />
     <MyProjects />
     <ContactMe />
 </template>

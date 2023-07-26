@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+// import { faEye } from '@fortawesome/free-solid-svg-icons'
+// import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library.add(faUserSecret)

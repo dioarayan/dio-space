@@ -24,13 +24,41 @@
         </div>
       </div>
     </div>
+    <div class="proj-content">
+      <img class="proj-img" src="../../public/dts.png">
+      <div class="proj-description">
+        <h4>Document Tracker</h4>
+        <p>
+          Although the development stage  is still ongoing, the system is useful to any business offices with lots of paperwork to be routed. The system can add users who would be responsible for recording and routing documents while guests can only view the route information of all documents.
+        </p>
+        <div class="proj-controls">
+          <base-button link href="https://dioarayan.github.io/covid-statistics/">
+            <span>
+              <font-awesome-icon icon="fa-regular fa-eye" />
+            </span>
+            Live Demo
+          </base-button>
+          <base-button link class="outline" href="https://github.com/dioarayan/covid-statistics">
+            <span>
+               <font-awesome-icon icon="fa-brands fa-github" />
+            </span> 
+            Code 
+          </base-button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .proj-img{
-  padding: 24px;
+  box-shadow: 10px 10px lightblue;
+  margin: 24px;
   width: 420px;
+}
+
+.proj-description {
+  padding: 2px 10px;
 }
 
 .proj-content {

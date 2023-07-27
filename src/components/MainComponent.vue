@@ -8,10 +8,12 @@
     <MySkills />
     <MyProjects />
     <ContactMe />
+    <TheFooter />
 </template>
 
 <script setup>
-import TheNavigation from '../components/TheNavigation.vue';
+import TheNavigation from '../components/layout/TheNavigation.vue';
+import TheFooter from '../components/layout/TheFooter.vue';
 import MyIntro from '../components/MyIntro.vue';
 import AboutMe from '../components/AboutMe.vue';
 import MySkills from './MySkills.vue';

@@ -3,7 +3,7 @@
     <img
       alt="Vue logo"
       class="logo"
-      src="../assets/logo.svg"
+      src="../../assets/logo.svg"
       width="25"
       height="25" />
   
@@ -27,6 +27,12 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 280px;
+}
+
+a {
+  text-decoration: none;
+  color: #eacf86;
+  transition: 0.4s;
 }
 
 /* @media (max-width: 740px) {

@@ -1,10 +1,12 @@
 <script>
+import TheFooter from './components/layout/TheFooter.vue';
 import TheNavigation from './components/layout/TheNavigation.vue';
 
 export default {
   components: {
-    TheNavigation
-  }  
+    TheNavigation,
+    TheFooter
+}  
 }
 
 </script>
@@ -14,6 +16,7 @@ export default {
   <router-view v-slot="slotProps">
     <component :is="slotProps.Component"></component>
   </router-view>
+  <TheFooter/>
 </template>
 
 

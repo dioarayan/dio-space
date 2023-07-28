@@ -76,10 +76,6 @@
   border-right: 1px solid #B6BFC5;
 }
 
-.inline{
-  display: flex;
-  align-items: center;
-}
 
 .stack-icons{
   display: flex;

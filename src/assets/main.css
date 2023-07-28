@@ -35,6 +35,11 @@ body {
   margin-bottom: 40px;
 }
 
+.inline{
+  display: flex;
+  align-items: center;
+}
+
 @media (hover: hover) {
   a:hover {
     text-decoration: underline;

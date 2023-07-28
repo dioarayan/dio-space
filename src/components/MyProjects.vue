@@ -45,6 +45,13 @@
               </span> 
               Code 
             </base-button>
+            <router-link to="/projects-dts">
+              <span>
+                <iconify-icon icon="material-symbols:camera" style="width: 1.5rem;" />
+              </span> 
+              Screenshots 
+            </router-link>
+
           </div>
         </div>
       </div>

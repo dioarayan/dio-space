@@ -1,10 +1,21 @@
-<script setup>
-import MainComponent from './components/MainComponent.vue';
+<script>
+import TheNavigation from './components/layout/TheNavigation.vue';
+
+export default {
+  components: {
+    TheNavigation
+  }  
+}
+
 </script>
 
 <template>
-  <MainComponent />
+  <TheNavigation />
+  <router-view v-slot="slotProps">
+    <component :is="slotProps.Component"></component>
+  </router-view>
 </template>
+
 
 
 

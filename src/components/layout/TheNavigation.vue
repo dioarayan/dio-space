@@ -1,21 +1,69 @@
 <template>
-  <div class="nav-wrapper">
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="../../assets/logo.svg"
-      width="25"
-      height="25" />
-  
-    <div class="nav-menu-wrapper {">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+  <header :class="{ 'onScroll': !topOfPage }">
+    <div class="nav-wrapper">
+      <img
+        alt="Vue logo"
+        class="logo"
+        src="../../assets/logo.svg"
+        width="25"
+        height="25" />
+    
+      <div class="nav-menu-wrapper {">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
     </div>
-  </div>
+  </header>
 </template>
 
+<script>
+import { ref, onBeforeMount } from 'vue';
+
+export default {
+  setup() {
+    // const view = reactive({
+    //   topOfPage: true
+    // })
+    const topOfPage = ref(true);
+    
+    onBeforeMount(()=>{
+      window.addEventListener('scroll', handleScroll)
+    })
+    
+    function handleScroll(){
+      if(window.scrollY>0){
+         topOfPage.value = false;
+      } else {
+         topOfPage.value = true;
+      }
+    }
+  
+    return { topOfPage }
+  }
+
+}
+
+</script>
+
 <style scoped>
+
+header {
+  background-color: transparent;
+  position: fixed; 
+  width: 100%;
+  transition: all .2s ease-in-out;
+}
+
+header.onScroll {
+  box-shadow: 0 0 10px #aaa;
+  background-color: #fff;
+}
+
+header.onScroll a {
+  color: #161c2c;
+}
+
 .nav-wrapper{
   display: flex;
   justify-content: space-between;

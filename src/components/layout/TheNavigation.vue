@@ -10,6 +10,7 @@
     
       <div class="nav-menu-wrapper {">
         <a href="#">Home</a>
+        <router-link to="/dioarayan#projects">Projects</router-link>
         <a href="#">About</a>
         <a href="#">Contact</a>
       </div>

@@ -9,7 +9,7 @@ const router = createRouter({
     { path: '/', redirect: '/dioarayan' },
     { path: '/dioarayan', component: MainComponent },
     { path: '/projects-dts', component: ProjectItem },
-  ]
+  ],
 });
 
 export default router;

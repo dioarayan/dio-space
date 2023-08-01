@@ -8,24 +8,36 @@
         width="25"
         height="25" />
     
-      <div class="nav-menu-wrapper {">
-        <a href="#">Home</a>
-        <router-link to="/dioarayan#projects">Projects</router-link>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
+        <div class="nav-menu-wrapper {">
+          <a @click="scrollToAnchor(intro.value)">Home</a>
+          <a @click="scrollToAnchor(about.value)" >About</a>
+          <!-- <a @click="scrollToAnchor(skills)" >Skills</a>
+          <a @click="scrollToAnchor(projects)" >Projects</a>
+          <a @click="scrollToAnchor(contact)">Contact</a> -->
+        </div>
     </div>
   </header>
 </template>
 
 <script>
 import { ref, onBeforeMount } from 'vue';
+// import useScrollToAnchor from '../../composables/scroll.js';
+// import eventBus from '../../composables/eventBus';
 
 export default {
-  setup() {
+  // emits: ['scroll-to-section'],
+  props : ['parentRefs'],
+  setup(props) {
+    const intro = ref(props.parentRefs.intro);
+    const about = ref(props.parentRefs.about);
+    const scrollTarget = ref(null);
+    console.log(props.parentRefs.intro)
+    console.log(intro.value)
     // const view = reactive({
     //   topOfPage: true
     // })
+    // const { scrollToAnchor } = useScrollToAnchor();
+
     const topOfPage = ref(true);
     
     onBeforeMount(()=>{
@@ -39,8 +51,15 @@ export default {
          topOfPage.value = true;
       }
     }
+
+    function scrollToAnchor(refName) {
+      console.log(intro.value)
+      scrollTarget.value = refName;
+      console.log(scrollTarget.value)
+      scrollTarget.value.scrollIntoView({ behavior: 'smooth' });
+    }
   
-    return { topOfPage }
+    return {  scrollTarget, scrollToAnchor, topOfPage, intro, about }
   }
 
 }

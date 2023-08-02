@@ -1,15 +1,16 @@
 <template>
-  <section class="wrapper-intro">
-    <div class="content">
-      <p>Hi, my name is </p>
-      <h2>DIO ARAYAN</h2>
-      <p>I'm an aspiring <span style="color: #EACF86">web developer</span></p>
-      <base-button link to="#">Get in touch</base-button>
-      <base-button link to="#" mode="outline">Resume</base-button>
+  <div class="wrapper">
+    <div class="wrapper-intro">
+      <div class="content">
+        <p>Hi, my name is </p>
+        <h2>DIO ARAYAN</h2>
+        <p>I'm an aspiring <span style="color: #EACF86">web developer</span></p>
+        <base-button link to="#">Get in touch</base-button>
+        <base-button link to="#" mode="outline">Resume</base-button>
+      </div>
     </div>
-  </section>
+  </div>
 </template>
-
 
 <style scoped>
 .wrapper-intro{

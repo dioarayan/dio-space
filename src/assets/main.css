@@ -18,6 +18,7 @@ body {
 }
 
 .wrapper {
+  width: 100%;
   overflow: auto; 
 }
 
@@ -48,18 +49,9 @@ body {
   }
 }
 
-/* @media (max-width: 700px) {
-  body {
-    display: flex;
-    place-items: center;
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 80%;
   }
-
-  #app {
-    display: flex;
-    flex-direction: column;
-  }
-  .wrapper{
-    padding: 5px;
-  }
-} */
+}
 

@@ -1,68 +1,67 @@
 <template>
-  <div class="wrapper">
-    <div class="fill-background">
-        <!-- <div class="wrapper-contact-layout">
-          <div class="wrapper-flex-item-1">
-            <div class="flex-contact">
-              <div class="contact-form">
-                <h1 class="section-header">Let's get in touch!</h1>
-                <form>
-                  <div class="input-control">
-                    <label for="form-name"> Your Name </label>              
-                      <input type="text" class="form-input" id="form-name" name="name">
-                  </div>
-                  <div class="input-control">
-                    <label for="form-email">Mail</label>
-                      <input type="email" class="form-input" name="email">
-                  </div>
-                  <div class="input-control">
-                    <label for="form-message">Message</label>
-                    <textarea id="form-message" rows="6" cols="30" name="message"></textarea>
-                  </div>
-                  <base-button type="submit"> Send</base-button>
-                </form>
+  <div class="wrapper-content-layout">
+    <div class="wrapper">
+    <!-- <div class="wrapper-contact-layout">
+      <div class="wrapper-flex-item-1">
+        <div class="flex-contact">
+          <div class="contact-form">
+            <h1 class="section-header">Let's get in touch!</h1>
+            <form>
+              <div class="input-control">
+                <label for="form-name"> Your Name </label>              
+                  <input type="text" class="form-input" id="form-name" name="name">
               </div>
-            </div>
-          </div>
-          <div class="wrapper-flex-item-2">
-              <p>You can also find me on these links</p>
-              <div class="stack-icons">
-                <a href="https://github.com/dioarayan" target="_blank"> <iconify-icon icon="mdi:github" />  </a>
-                <a href="https://www.linkedin.com/in/dioreginearayan1994/" target="_blank"><iconify-icon icon="mdi:linkedin" /> </a>           
-                <a href="https://twitter.com/dioarayan" target="_blank"><iconify-icon icon="mdi:twitter" /> </a>            
+              <div class="input-control">
+                <label for="form-email">Mail</label>
+                  <input type="email" class="form-input" name="email">
               </div>
-          </div>
-        </div> -->
-        <div class="wrapper-contact-layout">
-          <div class="flex-item-1">
-           <p>Email me:</p>
-           <div class="inline"><iconify-icon icon="ic:baseline-email" /> <a href="mailto:drarayan1994@gmail.com" target="_blank"> drarayan1994@gmail.com </a></div>
-          </div>
-          <div class="flex-item-2">
-            <p>Or you can also find me on these links</p>
-              <div class="stack-icons">
-                <a href="https://github.com/dioarayan" target="_blank"> <iconify-icon icon="mdi:github" />  </a>
-                <a href="https://www.linkedin.com/in/dioreginearayan1994/" target="_blank"><iconify-icon icon="mdi:linkedin" /> </a>           
-                <a href="https://twitter.com/dioarayan" target="_blank"><iconify-icon icon="mdi:twitter" /> </a>            
+              <div class="input-control">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" rows="6" cols="30" name="message"></textarea>
               </div>
+              <base-button type="submit"> Send</base-button>
+            </form>
           </div>
         </div>
+      </div>
+      <div class="wrapper-flex-item-2">
+          <p>You can also find me on these links</p>
+          <div class="stack-icons">
+            <a href="https://github.com/dioarayan" target="_blank"> <iconify-icon icon="mdi:github" />  </a>
+            <a href="https://www.linkedin.com/in/dioreginearayan1994/" target="_blank"><iconify-icon icon="mdi:linkedin" /> </a>           
+            <a href="https://twitter.com/dioarayan" target="_blank"><iconify-icon icon="mdi:twitter" /> </a>            
+          </div>
+      </div>
+    </div> -->
+      <div class="content">
+        <div class="flex-item-1">
+          <p>Email me:</p>
+          <div class="inline"><iconify-icon icon="ic:baseline-email" /> <a href="mailto:drarayan1994@gmail.com" target="_blank"> drarayan1994@gmail.com </a></div>
+        </div>
+        <div class="flex-item-2">
+          <p>Or you can also find me on these links</p>
+            <div class="stack-icons">
+              <a href="https://github.com/dioarayan" target="_blank"> <iconify-icon icon="mdi:github" />  </a>
+              <a href="https://www.linkedin.com/in/dioreginearayan1994/" target="_blank"><iconify-icon icon="mdi:linkedin" /> </a>           
+              <a href="https://twitter.com/dioarayan" target="_blank"><iconify-icon icon="mdi:twitter" /> </a>            
+            </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 
-.fill-background{
+.wrapper-content-layout{
   background-color: #96A4AE;
-  /* padding: 20px 0px; */
 }
 
-.wrapper-contact-layout{
+.content {
+  padding: 6px 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  padding: 60px 30px;
 }
 
 .flex-item-1, .flex-item-2 {

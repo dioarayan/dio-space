@@ -1,7 +1,6 @@
 <template>
-  <div id="projects">
+  <div class="wrapper-content-layout">
     <div class="wrapper">
-      <div class="wrapper-content-layout">
         <h1 class="section-header">My Projects</h1>
         <div class="proj-content">
           <img class="proj-img" src="../../public/covid-stat.png">
@@ -52,7 +51,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

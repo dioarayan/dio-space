@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper">
-    <div class="wrapper-content-layout">
+  <div class="wrapper-content-layout">
+    <div class="wrapper">
       <h1 class="section-header">About Me</h1>
       <div class="content">
         <div class="flex-item-1">
@@ -21,7 +21,7 @@
         </div>
         <div class="flex-item-2">
           <p>My name is Dio Regine Arayan. I am an enthusiastic and driven web developer. I have a deep passion in coding and making dynamic and user-friendly websites that could help people on their personal and business goals. 
-            <br><p>I am driven and ambitious professional with seven years of experience in Administrative Services. Transitioning into Software Development to pursue my passion and leverage my skills in programming. I am known for exceptional problem-solving skills and determination to learn new things and I commit to continuous growth and am eager to contribute to the success of a dynamic organization in Web Development</p>
+            <br><p>As a computer science graduate, I embarked on a journey that took me far beyond the world of programming. Despite my initial focus on computer science, life had a different trajectory in mind. Instead of diving headfirst into the tech world, I found myself drawn to the world of administrative services. This unexpected shift allowed me to explore new aspects of my abilities and interests. Years later, I found myself drawn back to the tech world, armed with a perspective that had been enriched by my diverse experiences. This time, my approach was holistic and multifaceted, blending my tech know-how with a newfound appreciation for creativity and innovation.</p>
             I believe that having a Computer Science diploma is a solid foundation, but in this rapidly evolving field of Software Development, dedication and continuous self-improvement is the key to further develop the necessary skills and knowledge.<br>
           </p>
         </div>

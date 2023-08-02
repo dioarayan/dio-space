@@ -1,34 +1,38 @@
 <template>
-  <header class="topNav" :class="{ 'onScroll': !topOfPage }" id="myTopNav">
-    <div class="nav-wrapper">
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="../../public/favicon.ico"
-        width="25"
-        height="25" />
-
-        <i @click="showMenu">
-          <iconify-icon icon="fa-solid:bars" style="width: 2rem;" />
-        </i>
-    
-      <div class="nav-menu-wrapper {">
-        <a class="menu-list" @click="scrollToAnchor(intro)">Home</a>
-        <a class="menu-list" @click="scrollToAnchor(about)" >About</a>
-        <a class="menu-list" @click="scrollToAnchor(skills)" >Skills</a>
-        <a class="menu-list" @click="scrollToAnchor(projects)" >Projects</a>
-        <a class="menu-list" @click="scrollToAnchor(contact)">Contact</a>
+  <div class="myHeader" :class="[ topOfPage ? '' : 'onScroll', showMobileMenu ? 'responsive' : '' ]" >
+    <div class="wrapper">
+      <div class="nav-wrapper">
+        <img
+          alt="Vue logo"
+          class="logo"
+          src="../../public/favicon.ico"
+          width="25"
+          height="25" />
+  
+        <div class="nav-menu-wrapper">
+          <a class="menu-list" @click="scrollToAnchor(intro)">Home</a>
+          <a class="menu-list" @click="scrollToAnchor(about)" >About</a>
+          <a class="menu-list" @click="scrollToAnchor(skills)" >Skills</a>
+          <a class="menu-list" @click="scrollToAnchor(projects)" >Projects</a>
+          <a class="menu-list" @click="scrollToAnchor(contact)">Contact</a>
+          <a class="hamburger" @click="showMenu">
+            <iconify-icon icon="fa-solid:bars" style="width: 3rem;" />
+          </a>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
+
     <div ref="intro">
       <section class="wrapper-intro">
-        <div class="content">
-          <p>Hi, my name is </p>
-          <h2>DIO ARAYAN</h2>
-          <p>I'm an aspiring <span style="color: #EACF86">web developer</span></p>
-          <a id="btn-link" @click="scrollToAnchor(contact)">Get in touch</a>
-          <base-button link to="#" mode="outline">Resume</base-button>
+        <div class="wrapper">
+          <div class="content">
+            <p>Hi, my name is </p>
+            <h2>DIO ARAYAN</h2>
+            <p>I'm an aspiring <span style="color: #EACF86">web developer</span></p>
+            <a id="btn-link" @click="scrollToAnchor(contact)">Get in touch</a>
+            <base-button link to="#" mode="outline">Resume</base-button>
+          </div>
         </div>
       </section>
     </div>
@@ -96,12 +100,14 @@ export default{
 
     function showMenu() {
       showMobileMenu.value = !showMobileMenu.value
+      console.log(showMobileMenu.value)
     }
 
     return { 
       scrollTarget,
       scrollToAnchor,
       showMenu,
+      showMobileMenu,
       topOfPage, 
       intro,
       about,
@@ -116,7 +122,9 @@ export default{
 
 <style scoped>
 
-header {
+.myHeader {
+  display: flex;
+  justify-content: center;
   background-color: transparent;
   position: fixed; 
   width: 100%;
@@ -126,12 +134,12 @@ header {
   overflow: hidden;
 }
 
-header.onScroll {
+.myHeader.onScroll {
   box-shadow: 0 0 10px #aaa;
   background-color: #fff;
 }
 
-header.onScroll a {
+.myHeader.onScroll a {
   color: #161c2c;
 }
 
@@ -142,7 +150,7 @@ header.onScroll a {
 .nav-wrapper{
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: center;
   padding: 10px 60px;
 }
 .nav-menu-wrapper {
@@ -165,7 +173,8 @@ a:hover {
 .wrapper-intro{
   display: flex;
   align-items: center;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
   background-color: #161c2c;
   padding: 0px 60px;
@@ -210,45 +219,49 @@ p{
 /* .topNav .nav-wrapper .nav-menu-wrapper .icon {
   display: none;
 } */
-i {
+.myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger {
   display: none;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   h2{
     line-height: 1;
   }
 
-  .nav-wrapper{
-    padding-top: 10px;
-    position: absolute;
-    width: 100%;
-    
-  }
-  
-  .open-menu {
-    opacity: 1;
-    height: 150px;
-  }
-  
-  .closed-menu {
-    opacity: 0;
-    height: 0;
-    padding: 0;
-  }
-  .nav-menu-wrapper{
-    flex-direction: column;
-    z-index: 100;
-    position: relative;
-    transition: all 0.2s ease-out;
+  svg {
+    padding-top: 20px;
+    padding-right: 30px;
   }
 
-  i {
+  .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a { display: none;}
+  .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger { 
+    float: right;
     display: block;
-    text-align: right;
-    padding: 0 10px 10px 0;
+  }
+
+  .myHeader.responsive, .myHeader.onScroll.responsive {position:relative;}
+  .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .myHeader.responsive, .myHeader.onScroll.responsive {
+    position: fixed;
+    height: 300px;
+    width: 100%;
   }
   
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper a,
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper,
+  .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper a,  
+  .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+  }
 }
 
 </style>

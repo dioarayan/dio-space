@@ -1,5 +1,5 @@
 <template>
-  <MainComponent />
+    <MainComponent />
 </template>
 
 <script>
@@ -13,3 +13,11 @@ export default {
 }   
 }
 </script>
+
+<style>
+  @media (min-width: 1440px) {
+    .container {
+      width: 80%;
+    }
+  }
+</style>

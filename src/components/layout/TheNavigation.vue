@@ -9,8 +9,8 @@
         height="25" />
     
         <div class="nav-menu-wrapper {">
-          <a @click="scrollToAnchor(intro.value)">Home</a>
-          <a @click="scrollToAnchor(about.value)" >About</a>
+          <a @click="scrollToAnchor(sectIntro)">Home</a>
+          <a @click="scrollToAnchor(sectIntro.value)" >About</a>
           <!-- <a @click="scrollToAnchor(skills)" >Skills</a>
           <a @click="scrollToAnchor(projects)" >Projects</a>
           <a @click="scrollToAnchor(contact)">Contact</a> -->
@@ -20,25 +20,16 @@
 </template>
 
 <script>
-import { ref, onBeforeMount } from 'vue';
+import { ref, inject, onBeforeMount } from 'vue';
 // import useScrollToAnchor from '../../composables/scroll.js';
 // import eventBus from '../../composables/eventBus';
 
 export default {
-  // emits: ['scroll-to-section'],
-  props : ['parentRefs'],
   setup(props) {
-    const intro = ref(props.parentRefs.intro);
-    const about = ref(props.parentRefs.about);
     const scrollTarget = ref(null);
-    console.log(props.parentRefs.intro)
-    console.log(intro.value)
-    // const view = reactive({
-    //   topOfPage: true
-    // })
-    // const { scrollToAnchor } = useScrollToAnchor();
-
     const topOfPage = ref(true);
+    const sectIntro = inject('intro')
+    console.log(sectIntro)
     
     onBeforeMount(()=>{
       window.addEventListener('scroll', handleScroll)
@@ -59,7 +50,12 @@ export default {
       scrollTarget.value.scrollIntoView({ behavior: 'smooth' });
     }
   
-    return {  scrollTarget, scrollToAnchor, topOfPage, intro, about }
+    return {  
+      scrollTarget, 
+      scrollToAnchor, 
+      topOfPage, 
+      sectIntro 
+    }
   }
 
 }

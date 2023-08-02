@@ -34,11 +34,11 @@
               Although the development stage  is still ongoing, the system is useful to any business offices with lots of paperwork to be routed. The system can add users who would be responsible for recording and routing documents while guests can only view the route information of all documents.
             </p>
             <div class="proj-controls">
-              <base-button link href="#">
+              <base-button link to="/projects-dts">
                 <span>
-                  <iconify-icon icon="mdi:eye" style="width: 1.5rem;" />
-                </span>
-                Live Demo
+                  <iconify-icon icon="material-symbols:camera" style="width: 1.5rem;" />
+                </span> 
+                Screenshots 
               </base-button>
               <a link href="https://github.com/dioarayan/document-tracker" target="_blank">
                 <span>
@@ -46,12 +46,6 @@
                 </span> 
                 Code 
               </a>
-              <base-button link to="/projects-dts">
-                <span>
-                  <iconify-icon icon="material-symbols:camera" style="width: 1.5rem;" />
-                </span> 
-                Screenshots 
-              </base-button>
 
             </div>
           </div>

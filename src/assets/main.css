@@ -38,6 +38,7 @@ body {
 .inline{
   display: flex;
   align-items: center;
+  padding: 20px 5px;
 }
 
 @media (hover: hover) {

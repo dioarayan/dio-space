@@ -10,6 +10,7 @@
   </section>
 </template>
 
+
 <style scoped>
 .wrapper-intro{
   display: flex;

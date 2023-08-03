@@ -5,7 +5,7 @@ import TheMain from './components/layout/TheMain.vue';
 import ProjectItem from './components/projects/ProjectItem.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/dio-space/'),
   routes: [
     { path: '/', redirect: '/dioarayan' },
     { path: '/dioarayan', component: TheMain },

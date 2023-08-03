@@ -45,10 +45,13 @@
 
 .flex-item-1{
   flex-grow: 3;
-  height: 300px;
+  height: 280px;
   display: flex;
   flex-direction: column;
-  align-items: space-around;
+  align-content: space-around;
+  justify-content: center;
+  text-align: center;
+  background-color: #B6BFC5;
 }
 
 .flex-item-2{

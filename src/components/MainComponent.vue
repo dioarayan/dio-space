@@ -3,18 +3,18 @@
     <div class="wrapper">
       <div class="nav-wrapper">
         <img
-          alt="Vue logo"
+          alt="DA"
           class="logo"
-          src="../../public/favicon.ico"
-          width="25"
-          height="25" />
+          src="../../public/dio-icon.png"
+          width="30"
+          height="30" />
   
         <div class="nav-menu-wrapper">
-          <a class="menu-list" @click="scrollToAnchor(intro)">Home</a>
-          <a class="menu-list" @click="scrollToAnchor(about)" >About</a>
-          <a class="menu-list" @click="scrollToAnchor(skills)" >Skills</a>
-          <a class="menu-list" @click="scrollToAnchor(projects)" >Projects</a>
-          <a class="menu-list" @click="scrollToAnchor(contact)">Contact</a>
+          <a class="menu-list" @click="scrollToAnchor(intro)">HOME</a>
+          <a class="menu-list" @click="scrollToAnchor(about)" >ABOUT</a>
+          <a class="menu-list" @click="scrollToAnchor(skills)" >SKILLS</a>
+          <a class="menu-list" @click="scrollToAnchor(projects)" >PROJECTS</a>
+          <a class="menu-list" @click="scrollToAnchor(contact)">CONTACT</a>
           <a class="hamburger" @click="showMenu">
             <iconify-icon icon="fa-solid:bars" style="width: 3rem;" />
           </a>
@@ -29,9 +29,9 @@
           <div class="content">
             <p>Hi, my name is </p>
             <h2>DIO ARAYAN</h2>
-            <p>I'm an aspiring <span style="color: #EACF86">web developer</span></p>
-            <a id="btn-link" @click="scrollToAnchor(contact)">Get in touch</a>
-            <base-button link to="#" mode="outline">Resume</base-button>
+            <p>I am an aspiring <span style="color: #EACF86">web developer</span></p>
+            <base-button id="btn-link" @click="scrollToAnchor(contact)">Get in touch</base-button>
+            <base-button mode="outline" href="public/Resume-Dio-Arayan.pdf" target="_blank">Resume</base-button>
           </div>
         </div>
       </section>
@@ -233,13 +233,17 @@ p{
     padding-right: 30px;
   }
 
+  .wrapper-intro{
+    padding: 0px 20px;
+  }
+
   .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a { display: none;}
   .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger { 
     float: right;
     display: block;
   }
 
-  .myHeader.responsive, .myHeader.onScroll.responsive {position:relative;}
+  .myHeader.responsive, .myHeader.onScroll.responsive {position: fixed;}
   .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger {
     position: absolute;
     right: 0;
@@ -247,20 +251,24 @@ p{
   }
 
   .myHeader.responsive, .myHeader.onScroll.responsive {
-    position: fixed;
     height: 300px;
     width: 100%;
+    background-color: #fff;
   }
   
-  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper a,
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper a:not(:last-child),
   .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper,
-  .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper a,  
+  .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper a:not(:last-child),  
   .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    margin: 10px 0px;
+    margin: 10px 20px;
+  }
+
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper a:not(:last-child):hover{
+    text-decoration: underline;
   }
 }
 

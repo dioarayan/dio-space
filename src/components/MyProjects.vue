@@ -10,18 +10,18 @@
               This static website is designed based on the API provided by RapidAPI. Developed using Vue.js framework with Tailwind CSS, its purpose is solely for tracking current statistics on Covid-19 pandemic in all countries all over the world. 
             </p>
             <div class="proj-controls">
-              <a href="https://dioarayan.github.io/covid-statistics/" target="_blank">
+              <base-button href="https://dioarayan.github.io/covid-statistics/" target="_blank">
                 <span>
                   <iconify-icon icon="mdi:eye" style="width: 1.5rem;" />
                 </span>
                 Live Demo
-              </a>
-              <a href="https://github.com/dioarayan/covid-statistics" target="_blank">
+              </base-button>
+              <base-button href="https://github.com/dioarayan/covid-statistics" target="_blank" mode="outline">
                 <span>
                   <iconify-icon icon="mdi:github" style="width: 1.5rem;" />
                 </span> 
                 Code 
-              </a>
+              </base-button>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
           <div class="proj-description">
             <h4>Document Tracker</h4>
             <p>
-              Although the development stage  is still ongoing, the system is useful to any business offices with lots of paperwork to be routed. The system can add users who would be responsible for recording and routing documents while guests can only view the route information of all documents.
+              Although the development stage  is still ongoing, the system can add users to be responsible for recording and routing documents while guests can only view the route information of all documents. Developed using Ruby on Rails 7 and Bootstrap. 
             </p>
             <div class="proj-controls">
               <base-button link to="/projects-dts">
@@ -39,13 +39,12 @@
                 </span> 
                 Screenshots 
               </base-button>
-              <a link href="https://github.com/dioarayan/document-tracker" target="_blank">
+              <base-button link href="https://github.com/dioarayan/document-tracker" target="_blank" mode="outline">
                 <span>
                   <iconify-icon icon="mdi:github" style="width: 1.5rem;" />
                 </span> 
                 Code 
-              </a>
-
+              </base-button>
             </div>
           </div>
         </div>
@@ -58,6 +57,8 @@
   box-shadow: 10px 10px lightblue;
   margin: 24px;
   width: 420px;
+  max-width: 100%;
+  height: auto;
 }
 
 .proj-description {
@@ -104,16 +105,25 @@ a {
     flex-direction: column;
   }
 
+  .proj-img {
+    box-shadow: 10px 10px lightblue;
+    width: 100%;
+    height: auto;
+  }
+
   .proj-description p {
     width: 100%;
   }
 
-
   .proj-controls{
-    width: 50%;
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
+    text-align: center;
+  }
+
+  .proj-content {
+    padding: 6px 6px;
   }
 }
 

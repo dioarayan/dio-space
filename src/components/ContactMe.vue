@@ -59,7 +59,7 @@
 }
 
 .content {
-  padding: 6px 60px;
+  padding: 6px 6px;
   display: flex;
   flex-direction: row;
 }
@@ -69,6 +69,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 .flex-item-1 {
@@ -91,10 +92,9 @@ svg {
 a { color: inherit; } 
 
 @media (max-width: 700px) {
-  .wrapper-contact-layout{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+
+  .content{
+    flex-direction: column;
   }
 
   .flex-item-1, .flex-item-2 {

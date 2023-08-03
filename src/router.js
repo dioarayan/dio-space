@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // import MainComponent from './components/MainComponent.vue'
 import TheMain from './components/layout/TheMain.vue';
 import ProjectItem from './components/projects/ProjectItem.vue'
+import SkillView from './components/section/SkillView.vue'
 
 const router = createRouter({
   history: createWebHistory('/dio-space/'),
@@ -10,6 +11,7 @@ const router = createRouter({
     { path: '/', redirect: '/dioarayan' },
     { path: '/dioarayan', component: TheMain },
     { path: '/projects-dts', component: ProjectItem },
+    { path: '/skills', component: SkillView },
   ],
 });
 

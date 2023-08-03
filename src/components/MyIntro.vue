@@ -50,6 +50,10 @@ p{
   h2{
     line-height: 1;
   }
+
+  .wrapper-intro{
+    padding: 0px 10px;
+  }
 }
 
 </style>

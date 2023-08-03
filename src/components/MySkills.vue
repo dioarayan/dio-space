@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper-content-layout">
     <div class="wrapper">
+      <h1 class="section-header">My Skills</h1>
       <div class="flex-container">  
-        <h1 class="section-header">My Skills</h1>
   
         <div class="icon-flex">
           <svg viewBox="0 0 128 128">
@@ -99,7 +99,7 @@
 <style scoped>
 .wrapper-content-layout {
   background-color: #DDDCDA;
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
 }
 
 svg {
@@ -120,6 +120,7 @@ svg {
   flex-direction: column;
   /* height: 200px; */
   margin: 20px;
+  align-items: center;
   justify-content: center;
   align-items: space-between;
 }
@@ -133,6 +134,7 @@ svg {
 @media (max-width: 700px) {
   .flex-container{
     flex-direction: column;
+    padding: 6px 6px;
   }
 
   svg{

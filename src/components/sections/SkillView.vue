@@ -14,13 +14,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0 auto;
-    padding: 6px 60px;
-  }
-</style>

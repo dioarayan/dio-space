@@ -1,7 +1,7 @@
 <template>
   <div class="skill-item-flex">
-    <iconify-icon :icon = "iconTitle" :width="width" :height="height"></iconify-icon>
-    <p>{{ title }}</p>
+    <iconify-icon :icon = "icon" :width="width" :color="color"></iconify-icon>
+    <p>{{ name }}</p>
   </div>
 </template>
 
@@ -10,28 +10,32 @@ import {ref} from 'vue';
 
 export default {
   props: {
-    title: {
+    name: {
       type: String,
       default: 'Skill Name'
     },
-    iconTitle: {
+    icon: {
       type: String,
       default: 'fa-solid:bars'
     },
     width: {
       type: Number,
       default: 40
+    },
+    color: {
+      type: String,
+      default: '#161c2c'
     }
   },
   setup(props){
-    const title = ref(props.title);
-    const iconTitle = ref(props.iconTitle)
-    console.log(title.value)
-    console.log(iconTitle.value)
+    const name = ref(props.name);
+    const icon= ref(props.icon)
+    const color= ref(props.color)
 
     return {
-      title,
-      iconTitle
+      name,
+      icon,
+      color
     }
   }
 }
@@ -42,7 +46,7 @@ export default {
 .skill-item-flex {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 40px;
   align-items: center;
 }
 

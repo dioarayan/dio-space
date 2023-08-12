@@ -17,6 +17,14 @@ body {
   font-weight: normal;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 90px 60px;
+}
+
 .wrapper {
   width: 100%;
   overflow: auto; 
@@ -58,6 +66,10 @@ body {
 @media (max-width: 700px){
   .wrapper-content-layout{
     padding: 30px 10px;
+  }
+
+  .container {
+    padding: 20px;
   }
   
 }

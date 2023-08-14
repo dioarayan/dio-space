@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>My Skills</h1>
+    <h1 class="section-header">My Skills</h1>
     <SkillList />
   </div>
 </template>

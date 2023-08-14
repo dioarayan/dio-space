@@ -31,6 +31,7 @@ export default {
       { icon: "devicon-plain:rails", width: width.value, name: "Rails", color: color.value },
       { icon: "ri:bootstrap-fill", width: width.value, name: "Bootstrap", color: color.value },
       { icon: "mdi:tailwind", width: width.value, name: "Tailwind", color: color.value },
+      { icon: "ion:logo-figma", width: width.value, name: "Figma", color: color.value },
       { icon: "akar-icons:node-fill", width: width.value, name: "Node.js", color: color.value },
       { icon: "bi:git", width: width.value, name: "Git", color: color.value },
       { icon: "simple-icons:mongodb", width: width.value, name: "MongoDB", color: color.value },

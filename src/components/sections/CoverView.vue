@@ -1,6 +1,7 @@
 <template>
-  <section class="container">
-    <div class="content">
+  <div class="container-intro">
+    <!-- <div class="wrapper"> -->
+      <div class="content">
       <p>Hi, my name is </p>
       <h2>DIO ARAYAN</h2>
       <p>I am an aspiring <span style="color: #EACF86">web developer</span></p>
@@ -8,12 +9,14 @@
       <base-button href="/dio-space/#contact" id="btn-link">Get in touch</base-button>
       <base-button mode="outline" href="public/Resume-Dio-Arayan.pdf" target="_blank">Resume</base-button>
     </div>
-  </section>
+    <!-- </div> -->
+  </div>
 </template>
 
 <style scoped>
-.container {
+.container-intro {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 100vh;
   background-color: #161c2c;
@@ -23,6 +26,12 @@
 .content {
   margin: 0;
   line-height: 2rem;
+}
+
+a {
+  width: 90px;
+  max-width: 100%;
+  text-align: center;
 }
 
 h2, p {
@@ -41,5 +50,27 @@ p{
   text-transform: none !important;
   font-weight: 400 !important;
   /* padding-bottom: 20px; */
+}
+
+@media (min-width: 1440px) {
+  .container-intro {
+    padding: 90px 200px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .container-intro {
+    padding: 20px;
+  }
+
+  h2{
+    line-height: 1;
+  }
+
+  svg {
+    padding-top: 20px;
+    padding-right: 30px;
+  }
+
 }
 </style>

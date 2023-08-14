@@ -10,11 +10,11 @@
           height="30" />
       
         <div class="nav-menu-wrapper {">
-          <a @click="$emit('scrollToAnchor', 'home')" class="menu-list">HOME</a>
-          <a @click="$emit('scrollToAnchor', 'about')" class="menu-list">ABOUT</a>
-          <a @click="$emit('scrollToAnchor', 'skills')" class="menu-list">SKILLS</a>
-          <a @click="$emit('scrollToAnchor', 'projects')" class="menu-list">PROJECTS</a>
-          <a @click="$emit('scrollToAnchor', 'contact')" class="menu-list">CONTACT</a>
+          <a href="/dioarayan/#home" class="menu-list">HOME</a>
+          <a href="/dioarayan/#about" class="menu-list">ABOUT</a>
+          <a href="/dioarayan/#skills" class="menu-list">SKILLS</a>
+          <a href="/dioarayan/#projects" class="menu-list">PROJECTS</a>
+          <a href="/dioarayan/#contact" class="menu-list">CONTACT</a>
           <a class="hamburger" @click="showMenu">
             <iconify-icon icon="fa-solid:bars" style="width: 3rem;" />
           </a>

@@ -2,12 +2,14 @@
   <header class="myHeader" :class="[ topOfPage ? '' : 'onScroll', showMobileMenu ? 'responsive' : '' ]" >
     <div class="wrapper">
       <div class="nav-wrapper">
-        <img
-          alt="DA"
-          class="logo"
-          src="../../../public/dio-icon.png"
-          width="30"
-          height="30" />
+        <a href="/dio-space/#home">
+          <img
+            alt="DA"
+            class="logo"
+            src="../../../public/dio-icon.png"
+            width="30"
+            height="30" />
+        </a>
       
         <div class="nav-menu-wrapper {">
           <a href="/dio-space/#home" class="menu-list">HOME</a>
@@ -73,7 +75,6 @@ export default {
   height: 3.5rem;
   padding-top: 0.5rem;
   transition: all .2s ease-in-out;
-  overflow: hidden;
 }
 
 .myHeader.onScroll {
@@ -117,8 +118,18 @@ a:hover {
   display: none;
 }
 
+@media screen and (min-width: 1440px) {
+.nav-wrapper {
+    padding: 10px 0px;
+  }
+}
 
 @media screen and (max-width: 700px) {
+
+  .nav-wrapper {
+    padding: 10px 20px;
+  }
+
   svg {
     padding-top: 20px;
     padding-right: 30px;

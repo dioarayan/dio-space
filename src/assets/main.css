@@ -30,13 +30,6 @@ body {
   overflow: auto; 
 }
 
-.wrapper-content-layout{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 60px;
-}
-
 .section-header{
   width: 100%;
   color: #161c2c;
@@ -60,6 +53,10 @@ body {
 @media (min-width: 1440px) {
   .wrapper {
     width: 80%;
+  }
+
+  .container {
+    padding: 90px 200px;
   }
 }
 

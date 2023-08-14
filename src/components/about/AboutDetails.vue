@@ -65,16 +65,18 @@ export default {
   border-left: 1px solid #B6BFC5;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .about-content-flex {
     flex-direction: column-reverse;
     padding: 0px 20px;
   }
 
   .intro-flex {
+    padding: 20px 10px;
     border-left: none;
     border-bottom: 1px solid #B6BFC5;
   }
+
 }
 
 </style>

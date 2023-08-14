@@ -10,11 +10,11 @@
           height="30" />
       
         <div class="nav-menu-wrapper {">
-          <a href="/dioarayan/#home" class="menu-list">HOME</a>
-          <a href="/dioarayan/#about" class="menu-list">ABOUT</a>
-          <a href="/dioarayan/#skills" class="menu-list">SKILLS</a>
-          <a href="/dioarayan/#projects" class="menu-list">PROJECTS</a>
-          <a href="/dioarayan/#contact" class="menu-list">CONTACT</a>
+          <a href="/dio-space/#home" class="menu-list">HOME</a>
+          <a href="/dio-space/#about" class="menu-list">ABOUT</a>
+          <a href="/dio-space/#skills" class="menu-list">SKILLS</a>
+          <a href="/dio-space/#projects" class="menu-list">PROJECTS</a>
+          <a href="/dio-space/#contact" class="menu-list">CONTACT</a>
           <a class="hamburger" @click="showMenu">
             <iconify-icon icon="fa-solid:bars" style="width: 3rem;" />
           </a>

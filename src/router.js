@@ -6,10 +6,9 @@ import DocTrackerPage from './components/projects/DocTrackerPage.vue'
 import TheMain from './components/view/TheMain.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/dio-space/'),
   routes: [
-    { root: '/', redirect: '/dioarayan' },
-    { path: '/dioarayan', component: TheMain },
+    { path: '/', component: TheMain },
     { path: '/projects-dts', component: DocTrackerPage },
   ],
   scrollBehavior(to, from, savedPosition) {

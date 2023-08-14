@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <div class="container">
-      <router-link to="/dioarayan"><iconify-icon icon="ep:back" style="width: 2rem;" />Back to Porfolio</router-link>
       <h2>Document Tracker</h2>
       <p> Although the development stage  is still ongoing, the system is useful to any business offices with lots of paperwork to be routed. The system can add users who would be responsible for recording and routing documents while guests can only view the route information of all documents.</p>
         <div>
@@ -56,7 +55,7 @@
 
 <style scoped>
   .container {
-    padding: 30px 90px;
+    padding: 90px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;

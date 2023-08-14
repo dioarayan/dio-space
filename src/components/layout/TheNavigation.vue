@@ -1,35 +1,38 @@
 <template>
-  <header :class="{ 'onScroll': !topOfPage }">
-    <div class="nav-wrapper">
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="../../assets/logo.svg"
-        width="25"
-        height="25" />
-    
+  <header class="myHeader" :class="[ topOfPage ? '' : 'onScroll', showMobileMenu ? 'responsive' : '' ]" >
+    <div class="wrapper">
+      <div class="nav-wrapper">
+        <img
+          alt="DA"
+          class="logo"
+          src="../../../public/dio-icon.png"
+          width="30"
+          height="30" />
+      
         <div class="nav-menu-wrapper {">
-          <a @click="scrollToAnchor(sectIntro)">Home</a>
-          <a @click="scrollToAnchor(sectIntro.value)" >About</a>
-          <!-- <a @click="scrollToAnchor(skills)" >Skills</a>
-          <a @click="scrollToAnchor(projects)" >Projects</a>
-          <a @click="scrollToAnchor(contact)">Contact</a> -->
+          <a @click="$emit('scrollToAnchor', 'home')" class="menu-list">HOME</a>
+          <a @click="$emit('scrollToAnchor', 'about')" class="menu-list">ABOUT</a>
+          <a @click="$emit('scrollToAnchor', 'skills')" class="menu-list">SKILLS</a>
+          <a @click="$emit('scrollToAnchor', 'projects')" class="menu-list">PROJECTS</a>
+          <a @click="$emit('scrollToAnchor', 'contact')" class="menu-list">CONTACT</a>
+          <a class="hamburger" @click="showMenu">
+            <iconify-icon icon="fa-solid:bars" style="width: 3rem;" />
+          </a>
         </div>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
-import { ref, inject, onBeforeMount } from 'vue';
-// import useScrollToAnchor from '../../composables/scroll.js';
-// import eventBus from '../../composables/eventBus';
+import { ref, onBeforeMount } from 'vue';
 
 export default {
-  setup(props) {
-    const scrollTarget = ref(null);
-    const topOfPage = ref(true);
-    const sectIntro = inject('intro')
-    console.log(sectIntro)
+  emits: ['scrollToAnchor'],
+  setup(_1, ctx) {
+    const section = ref('')
+    const topOfPage = ref(true);    
+    const showMobileMenu = ref(false);
     
     onBeforeMount(()=>{
       window.addEventListener('scroll', handleScroll)
@@ -43,18 +46,16 @@ export default {
       }
     }
 
-    function scrollToAnchor(refName) {
-      console.log(intro.value)
-      scrollTarget.value = refName;
-      console.log(scrollTarget.value)
-      scrollTarget.value.scrollIntoView({ behavior: 'smooth' });
+    function showMenu() {
+      showMobileMenu.value = !showMobileMenu.value
     }
   
+    ctx.emit('scrollToAnchor', section.value)
+
     return {  
-      scrollTarget, 
-      scrollToAnchor, 
       topOfPage, 
-      sectIntro 
+      showMobileMenu,
+      showMenu,
     }
   }
 
@@ -63,34 +64,42 @@ export default {
 </script>
 
 <style scoped>
-
-header {
+.myHeader {
+  display: flex;
+  justify-content: center;
   background-color: transparent;
   position: fixed; 
   width: 100%;
+  height: 3.5rem;
+  padding-top: 0.5rem;
   transition: all .2s ease-in-out;
+  overflow: hidden;
 }
 
-header.onScroll {
+.myHeader.onScroll {
   box-shadow: 0 0 10px #aaa;
   background-color: #fff;
 }
 
-header.onScroll a {
+.myHeader.onScroll a {
   color: #161c2c;
+}
+
+.menu-list{
+  padding: 2px 10px;
 }
 
 .nav-wrapper{
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: center;
   padding: 10px 60px;
 }
 .nav-menu-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 280px;
+  /* width: 280px; */
 }
 
 a {
@@ -99,19 +108,55 @@ a {
   transition: 0.4s;
 }
 
-/* @media (max-width: 740px) {
-  header {
-    display: flex;
+a:hover {
+  cursor: pointer;
+}
+
+
+.myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger {
+  display: none;
+}
+
+
+@media screen and (max-width: 700px) {
+  svg {
+    padding-top: 20px;
+    padding-right: 30px;
+  }
+  
+  .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a { display: none;}
+  .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger { 
+    float: right;
+    display: block;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .myHeader.responsive, .myHeader.onScroll.responsive {position: fixed;}
+  .myHeader .wrapper .nav-wrapper .nav-menu-wrapper a.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  .wrapper {
+  .myHeader.responsive, .myHeader.onScroll.responsive {
+    height: 300px;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper a:not(:last-child),
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper,
+  .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper a:not(:last-child),  
+  .myHeader.onScroll.responsive .wrapper .nav-wrapper .nav-menu-wrapper{
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 10px 20px;
   }
-} */
+
+  .myHeader.responsive .wrapper .nav-wrapper .nav-menu-wrapper a:not(:last-child):hover{
+    text-decoration: underline;
+  }
+}
 </style>
 

@@ -37,16 +37,16 @@
       </section>
     </div>
     <div ref="about" >
-      <AboutMe />
+      <AboutView />
     </div>
     <div ref="skills" >
-      <MySkills />
+      <SkillView />
     </div>
     <div ref="projects" >
-      <MyProjects />
+      <ProjectView />
     </div>
     <div ref="contact" >
-      <ContactMe />
+      <ContactView />
     </div>
     <TheFooter />
 </template>
@@ -54,21 +54,27 @@
 <script>
 import TheFooter from '../components/layout/TheFooter.vue';
 import MyIntro from '../components/MyIntro.vue';
-import AboutMe from '../components/AboutMe.vue';
+import AboutView from './sections/AboutView.vue';
+// import AboutMe from '../components/AboutMe.vue';
 import MySkills from './MySkills.vue';
-import MyProjects from './MyProjects.vue';
-import ContactMe from './ContactMe.vue';
+import SkillView from './sections/SkillView.vue';
+import ProjectView from './sections/ProjectView.vue';
+import ContactView from './sections/ContactView.vue';
+// import ContactMe from './ContactMe.vue';
 import { ref, onBeforeMount } from 'vue';
 
 export default{
   components: {
     TheFooter,
     MyIntro,
-    AboutMe,
+    // AboutMe,
     MySkills,
-    MyProjects,
-    ContactMe
-  },
+    SkillView,
+    ProjectView,
+    // ContactMe,
+    AboutView,
+    ContactView
+},
   setup(){
     const intro = ref(null);
     const about = ref(null);

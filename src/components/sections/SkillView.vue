@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import SkillList from '../skills/SkillList.vue';
+import SkillList from "../skills/SkillList.vue";
 
 export default {
   components: {

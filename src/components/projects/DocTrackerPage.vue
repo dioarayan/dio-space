@@ -10,23 +10,23 @@
         </div>
         <div>
           <h4>Dashboard Page</h4>
-          <img src="/dio-space/dts/dashboard.png" alt=''>
+          <img src="/dio-space/dts/dashboard.png" alt="">
           <p>This section is where both users and guests can view all document records. Documents are categorized based on their status (Pending, Processing and Completed) and each documents are displayed like a list.</p>
         </div>
         <div>
           <h4>Login and Signup Page</h4>
           <div class="flex-col">
-            <img src="/dio-space/dts/signup.png" alt=''>
-            <img src="/dio-space/dts/login.png" alt=''>
+            <img src="/dio-space/dts/signup.png" alt="">
+            <img src="/dio-space/dts/login.png" alt="">
           </div>
-          <p>The <b>Signup Page </b>enables users to create new account. This page only asks information on the user's username, email and password.<br>
+          <p>The <b>Signup Page </b>enables users to create new account. This page only asks information on the user"s username, email and password.<br>
             The <b>Login Page</b> allows uers to authenticate themselves and gain access asking the email and password. Once a user enters their credentials and clicks the "Login" button, the system compares the provided information with the stored credentials in its database. If the information matches, the user is granted access to the restricted area of the Document Tracker System</p>
         </div>
         <div>
           <h4>New Document Action</h4>
           <div class="flex-col">
-            <img src="/dio-space/dts/new_doc.png" alt=''>
-            <!-- <img src='../../../public/dts/login.png' alt=''> -->
+            <img src="/dio-space/dts/new_doc.png" alt="">
+            <!-- <img src="../../../public/dts/login.png" alt=""> -->
           </div>
           <p>On the My logs tab, the user can create a new document. By clicking the New log, a modal will appear where the user can input all the necessary data for a document. Such data are as follows:</p>
           <ul>
@@ -39,7 +39,7 @@
         <div>
           <h4>Route Document Action</h4>
           <div class="flex-col">
-            <img src="/dio-space/dts/route_doc.png" alt=''>
+            <img src="/dio-space/dts/route_doc.png" alt="">
           </div>
           <p>The route document is where you send information of documents to other users for them to take action. It is just like sending text message or emailing to your colleagues, the difference is that the user is sending extra data of a document. And these extra data are rather crucial for the process. These data are the following:</p>
           <ul>

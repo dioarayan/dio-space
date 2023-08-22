@@ -27,17 +27,17 @@
 </template>
 
 <script>
-import { ref, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from "vue";
 
 export default {
-  emits: ['scrollToAnchor'],
+  emits: ["scrollToAnchor"],
   setup(_1, ctx) {
-    const section = ref('')
+    const section = ref("")
     const topOfPage = ref(true);    
     const showMobileMenu = ref(false);
     
     onBeforeMount(()=>{
-      window.addEventListener('scroll', handleScroll)
+      window.addEventListener("scroll", handleScroll)
     })
     
     function handleScroll(){
@@ -52,7 +52,7 @@ export default {
       showMobileMenu.value = !showMobileMenu.value
     }
   
-    ctx.emit('scrollToAnchor', section.value)
+    ctx.emit("scrollToAnchor", section.value)
 
     return {  
       topOfPage, 

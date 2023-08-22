@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import SkillItem from './SkillItem.vue';
-import { ref } from 'vue';
+import SkillItem from "./SkillItem.vue";
+import { ref } from "vue";
 
 export default {
   components: {
@@ -22,7 +22,7 @@ export default {
   },
   setup(){
     const width = ref(80);
-    const color = ref('#161c2c');
+    const color = ref("#161c2c");
     const skills = ref([
       { icon: "ant-design:html5-filled", width: width.value, name: "HTML", color: color.value },
       { icon: "simple-icons:css3", width: width.value, name: "CSS", color: color.value },

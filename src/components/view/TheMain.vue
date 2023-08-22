@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import AboutView from '../sections/AboutView.vue';
-import ContactView from '../sections/ContactView.vue';
-import CoverView from '../sections/CoverView.vue';
-import ProjectView from '../sections/ProjectView.vue';
-import SkillView from '../sections/SkillView.vue';
-import { ref } from 'vue';
+import AboutView from "../sections/AboutView.vue";
+import ContactView from "../sections/ContactView.vue";
+import CoverView from "../sections/CoverView.vue";
+import ProjectView from "../sections/ProjectView.vue";
+import SkillView from "../sections/SkillView.vue";
+import { ref } from "vue";
 
 export default {
   components: {
@@ -23,17 +23,17 @@ export default {
   setup() {
     const scrollTarget = ref(null)
     const sections = ref([
-      { title: "home", component: 'CoverView'},
-      { title: "about", component: 'AboutView'},
-      { title: "skills", component: 'SkillView'},
-      { title: "projects", component: 'ProjectView'},
-      { title: "contact", component: 'ContactView'}
+      { title: "home", component: "CoverView"},
+      { title: "about", component: "AboutView"},
+      { title: "skills", component: "SkillView"},
+      { title: "projects", component: "ProjectView"},
+      { title: "contact", component: "ContactView"}
     ])
 
     function scrollToAnchor(refName) {
       scrollTarget.value = refName;
       console.log(scrollTarget.value)
-      scrollTarget.value.scrollIntoView({ behavior: 'smooth' });
+      scrollTarget.value.scrollIntoView({ behavior: "smooth" });
     }
 
     return {

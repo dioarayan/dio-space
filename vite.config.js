@@ -7,7 +7,13 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base: "/dio-space/",
   plugins: [
-    vue(),
+    vue({
+      template: {
+        transformAssetUrls: {
+            includeAbsolute: false,
+        },
+    },
+    }),
   ],
   resolve: {
     alias: {

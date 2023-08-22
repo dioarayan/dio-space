@@ -37,7 +37,7 @@ export default{
         externalLink: true,
       },
       {
-        image: '../../../public/dts/home.png',
+        image: '../../../public/home.png',
         title: 'Document Tracker',
         description: ' Although the development stage  is still ongoing, the system can add users to be responsible for recording and routing documents while guests can only view the route information of all documents. Developed using Ruby on Rails 7 and Bootstrap. ',
         demoLink: '/dio-space/projects-dts',

@@ -26,7 +26,7 @@ export default{
   setup(){
     const projects = ref([
       {
-        image: '../../public/covid-stat.png',
+        image: '../../../public/covid-stat.png',
         title: 'Covid19-Statistics',
         description: 'This static website is designed based on the API provided by RapidAPI. Developed using Vue.js framework with Tailwind CSS, its purpose is solely for tracking current statistics on Covid-19 pandemic in all countries all over the world. ',
         demoLink: 'https://dioarayan.github.io/covid-statistics/',
@@ -37,7 +37,7 @@ export default{
         externalLink: true,
       },
       {
-        image: '../../public/dts/home.png',
+        image: '../../../public/dts/home.png',
         title: 'Document Tracker',
         description: ' Although the development stage  is still ongoing, the system can add users to be responsible for recording and routing documents while guests can only view the route information of all documents. Developed using Ruby on Rails 7 and Bootstrap. ',
         demoLink: '/dio-space/projects-dts',

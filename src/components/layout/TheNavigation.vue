@@ -31,8 +31,7 @@ import { ref, onBeforeMount } from "vue";
 
 export default {
   emits: ["scrollToAnchor"],
-  setup(_1, ctx) {
-    const section = ref("")
+  setup() {
     const topOfPage = ref(true);    
     const showMobileMenu = ref(false);
     
@@ -51,8 +50,6 @@ export default {
     function showMenu() {
       showMobileMenu.value = !showMobileMenu.value
     }
-  
-    ctx.emit("scrollToAnchor", section.value)
 
     return {  
       topOfPage, 

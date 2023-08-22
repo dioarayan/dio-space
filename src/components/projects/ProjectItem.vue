@@ -1,6 +1,6 @@
 <template>
   <div class="proj-item-flex">
-    <img class="proj-img" :src="`/${imageSrc}`">
+    <img class="proj-img" :src="`../../../public/${imageSrc}`">
     <div class="proj-description">
       <h4>{{ projTitle }}</h4>
       <p>{{ projDesc }}</p>

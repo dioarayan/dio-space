@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import ContactDetails from './ContactDetails.vue';
-import { ref } from 'vue';
+import ContactDetails from "./ContactDetails.vue";
+import { ref } from "vue";
 
 export default {
   components: {

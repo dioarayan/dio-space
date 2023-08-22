@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import ProjectItem from './ProjectItem.vue';
-import { ref } from 'vue';
+import ProjectItem from "./ProjectItem.vue";
+import { ref } from "vue";
 
 export default{
   components: {
@@ -26,25 +26,25 @@ export default{
   setup(){
     const projects = ref([
       {
-        image: 'covid-stat.png',
-        title: 'Covid19-Statistics',
-        description: 'This static website is designed based on the API provided by RapidAPI. Developed using Vue.js framework with Tailwind CSS, its purpose is solely for tracking current statistics on Covid-19 pandemic in all countries all over the world. ',
-        demoLink: 'https://dioarayan.github.io/covid-statistics/',
-        githubLink: 'https://github.com/dioarayan/covid-statistics',
-        icon: 'mdi:eye',
+        image: "covid-stat.png",
+        title: "Covid19-Statistics",
+        description: "This static website is designed based on the API provided by RapidAPI. Developed using Vue.js framework with Tailwind CSS, its purpose is solely for tracking current statistics on Covid-19 pandemic in all countries all over the world. ",
+        demoLink: "https://dioarayan.github.io/covid-statistics/",
+        githubLink: "https://github.com/dioarayan/covid-statistics",
+        icon: "mdi:eye",
         width: 20,
-        action: 'Live Demo',
+        action: "Live Demo",
         externalLink: true,
       },
       {
-        image: 'home.png',
-        title: 'Document Tracker',
-        description: ' Although the development stage  is still ongoing, the system can add users to be responsible for recording and routing documents while guests can only view the route information of all documents. Developed using Ruby on Rails 7 and Bootstrap. ',
-        demoLink: '/projects-dts',
-        githubLink: 'https://github.com/dioarayan/document-tracker',
-        icon: 'material-symbols:camera',
+        image: "home.png",
+        title: "Document Tracker",
+        description: " Although the development stage  is still ongoing, the system can add users to be responsible for recording and routing documents while guests can only view the route information of all documents. Developed using Ruby on Rails 7 and Bootstrap. ",
+        demoLink: "/dio-space/projects-dts",
+        githubLink: "https://github.com/dioarayan/document-tracker",
+        icon: "material-symbols:camera",
         width: 20,
-        action: 'Screenshots',
+        action: "Screenshots",
         externalLink: false
       },
     ])

@@ -6,17 +6,17 @@
 </template>
 
 <script>
-import {ref} from 'vue';
+import {ref} from "vue";
 
 export default {
   props: {
     name: {
       type: String,
-      default: 'Skill Name'
+      default: "Skill Name"
     },
     icon: {
       type: String,
-      default: 'fa-solid:bars'
+      default: "fa-solid:bars"
     },
     width: {
       type: Number,
@@ -24,7 +24,7 @@ export default {
     },
     color: {
       type: String,
-      default: '#161c2c'
+      default: "#161c2c"
     }
   },
   setup(props){

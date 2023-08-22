@@ -18,7 +18,7 @@ export default{
     to: {
       type: String,
       required: false,
-      default: '/'
+      default: "/"
     },
     link: {
       type: Boolean,

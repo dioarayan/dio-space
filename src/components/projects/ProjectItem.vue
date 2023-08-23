@@ -5,7 +5,7 @@
       <h4>{{ projTitle }}</h4>
       <p>{{ projDesc }}</p>
       <div class="proj-controls">
-        <base-button :href="demoLink" :target="hasLink ? '_blank' : '_self'">
+        <base-button link :to="!hasLink ? demoLink : ''" :href="hasLink ? demoLink : ''" :target="hasLink ? '_blank' : '_self'">
           <span>
             <iconify-icon :icon="icon" :width="iconWidth"></iconify-icon>
           </span>

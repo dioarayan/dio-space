@@ -1,16 +1,8 @@
-<template>
-  <div class="skill-item-flex">
-    <iconify-icon :icon = "icon" :width="width" :color="color"></iconify-icon>
-    <p>{{ name }}</p>
-  </div>
-</template>
-
-<script>
+<script setup>
 import {ref} from "vue";
 
-export default {
-  props: {
-    name: {
+const props = defineProps({
+  name: {
       type: String,
       default: "Skill Name"
     },
@@ -26,20 +18,19 @@ export default {
       type: String,
       default: "#161c2c"
     }
-  },
-  setup(props){
-    const name = ref(props.name);
-    const icon= ref(props.icon)
-    const color= ref(props.color)
+})
 
-    return {
-      name,
-      icon,
-      color
-    }
-  }
-}
+const name = ref(props.name);
+const icon= ref(props.icon)
+const color= ref(props.color)
 </script>
+
+<template>
+  <div class="skill-item-flex">
+    <iconify-icon :icon = "icon" :width="width" :color="color"></iconify-icon>
+    <p>{{ name }}</p>
+  </div>
+</template>
 
 <style scoped>
 

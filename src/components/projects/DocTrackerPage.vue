@@ -1,3 +1,9 @@
+<script setup>
+function getImageUrl(name) {
+  return new URL(`../../../public/dts/${name}.png`, import.meta.url)
+}
+</script>
+
 <template>
   <div class="wrapper">
     <div class="container">
@@ -52,24 +58,6 @@
     </div>
   </div>
 </template>
-
-<script>
-
-export default {
-  setup(){
-   
-    // const getImageUrl = computed((name) => {
-    //   return new URL(`../../../dts/${name}.png`, import.meta.url)
-    // })
-
-    function getImageUrl(name) {
-      return new URL(`../../../public/dts/${name}.png`, import.meta.url)
-    }
-
-    return { getImageUrl }
-  }
-}
-</script>
 
 <style scoped>
   .container {

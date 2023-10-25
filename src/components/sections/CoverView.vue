@@ -5,7 +5,7 @@
       <p>Hi, my name is </p>
       <h2>DIO ARAYAN</h2>
       <p>I am an aspiring <span style="color: #EACF86">web developer</span></p>
-      <!-- <base-button id="btn-link" @click="scrollToAnchor(contact)">Get in touch</base-button> -->
+      <!-- <base-button id="btn-link" @click="(contact)">Get in touch</base-button> -->
       <base-button href="/dio-space/#contact" id="btn-link">Get in touch</base-button>
       <base-button mode="outline" href="/dio-space/Resume-Dio-Arayan.pdf" target="_blank">Resume</base-button>
     </div>

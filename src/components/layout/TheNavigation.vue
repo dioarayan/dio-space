@@ -1,3 +1,26 @@
+<script setup>
+import { ref, onBeforeMount } from "vue";
+const topOfPage = ref(true);    
+const showMobileMenu = ref(false);
+
+onBeforeMount(()=>{
+  window.addEventListener("scroll", handleScroll)
+})
+
+function handleScroll(){
+  if(window.scrollY>0){
+      topOfPage.value = false;
+  } else {
+      topOfPage.value = true;
+  }
+}
+
+function showMenu() {
+  showMobileMenu.value = !showMobileMenu.value
+}
+
+</script>
+
 <template>
   <header class="myHeader" :class="[ topOfPage ? '' : 'onScroll', showMobileMenu ? 'responsive' : '' ]" >
     <div class="wrapper">
@@ -25,42 +48,6 @@
     </div>
   </header>
 </template>
-
-<script>
-import { ref, onBeforeMount } from "vue";
-
-export default {
-  emits: ["scrollToAnchor"],
-  setup() {
-    const topOfPage = ref(true);    
-    const showMobileMenu = ref(false);
-    
-    onBeforeMount(()=>{
-      window.addEventListener("scroll", handleScroll)
-    })
-    
-    function handleScroll(){
-      if(window.scrollY>0){
-         topOfPage.value = false;
-      } else {
-         topOfPage.value = true;
-      }
-    }
-
-    function showMenu() {
-      showMobileMenu.value = !showMobileMenu.value
-    }
-
-    return {  
-      topOfPage, 
-      showMobileMenu,
-      showMenu,
-    }
-  }
-
-}
-
-</script>
 
 <style scoped>
 .myHeader {

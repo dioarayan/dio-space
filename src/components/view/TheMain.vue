@@ -30,15 +30,8 @@ export default {
       { title: "contact", component: "ContactView"}
     ])
 
-    function scrollToAnchor(refName) {
-      scrollTarget.value = refName;
-      console.log(scrollTarget.value)
-      scrollTarget.value.scrollIntoView({ behavior: "smooth" });
-    }
-
     return {
-      sections,
-      scrollToAnchor
+      sections
     }
   }
   

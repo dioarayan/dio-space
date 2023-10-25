@@ -1,3 +1,36 @@
+<script setup>
+import { ref, computed } from "vue"
+
+const props = defineProps({
+  imageSrc: { type: String },
+  projTitle: { type: String },
+  projDesc: { type: String },
+  demoLink: { type: String },
+  githubLink: { type: String },
+  icon: { type: String },
+  iconWidth: { type: Number },
+  control: { type: String },
+  externalLink: { type: Boolean },
+})
+
+const imageSrc = ref(props.imageSrc)
+const projTitle = ref(props.projTitle)
+const projDesc = ref(props.projDesc)
+const demoLink = ref(props.demoLink)
+const githubLink = ref(props.githubLink)
+const icon = ref(props.icon)
+const iconWidth = ref(props.iconWidth)
+const control = ref(props.control)
+const hasLink = ref(props.externalLink)
+
+const link = computed(() => {
+  if (hasLink.value = true){
+    return link
+  }
+  else return false
+})
+</script>
+
 <template>
   <div class="proj-item-flex">
     <img class="proj-img" :src="`/dio-space/${imageSrc}`">
@@ -21,46 +54,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { ref, computed } from "vue"
-
-export default{
-  props: {
-    imageSrc: { type: String },
-    projTitle: { type: String },
-    projDesc: { type: String },
-    demoLink: { type: String },
-    githubLink: { type: String },
-    icon: { type: String },
-    iconWidth: { type: Number },
-    control: { type: String },
-    externalLink: { type: Boolean },
-  },
-  setup(props){
-    const imageSrc = ref(props.imageSrc)
-    const projTitle = ref(props.projTitle)
-    const projDesc = ref(props.projDesc)
-    const demoLink = ref(props.demoLink)
-    const githubLink = ref(props.githubLink)
-    const icon = ref(props.icon)
-    const iconWidth = ref(props.iconWidth)
-    const control = ref(props.control)
-    const hasLink = ref(props.externalLink)
-
-    const link = computed(() => {
-      if (hasLink.value = true){
-        return link
-      }
-      else return false
-    })
-
-    return{
-      imageSrc, projTitle, projDesc, demoLink, githubLink, icon, iconWidth, control, link, hasLink
-    }
-  }
-}
-</script>
 
 <style scoped> 
 .proj-img{

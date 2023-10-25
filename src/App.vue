@@ -6,16 +6,9 @@
     <TheFooter />
 </template>
 
-<script>
+<script setup>
 import TheFooter from "./components/layout/TheFooter.vue";
 import TheNavigation from "./components/layout/TheNavigation.vue";
-
-export default {
-    components: {
-    TheNavigation,
-    TheFooter
-}
-}
 </script>
 
 
